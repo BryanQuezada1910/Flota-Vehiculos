@@ -1,0 +1,28 @@
+[
+    {
+        "id": 1,
+        "status": "Sin Ruta",
+        "location": {
+            "latitude": 13.481795,
+            "longitude": -88.183641
+        },
+        "performance": {
+            "fuel_level": 80,
+            "avg_speed": 90,
+            "total_km": 30
+        }
+    },
+    {
+        "id": 2,
+        "status": "En ruta",
+        "location": {
+            "latitude": 13.706792,
+            "longitude": -89.225392
+        },
+        "performance": {
+            "fuel_level": 50,
+            "avg_speed": 120,
+            "total_km": 50
+        }
+    }
+]

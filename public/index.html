@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fleet Management</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' rel='stylesheet' />
+    <style>
+        #map { position:absolute; top:0; bottom:50px; width:100%; }
+        #controls { position:absolute; bottom:0; width:100%; padding:10px; background:white; }
+        #form-container { display: flex; gap: 20px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="controls">
+        <div id="form-container">
+            <form id="add-vehicle-form">
+                <h3>Add Vehicle</h3>
+                <label>ID:</label><input type="number" id="add-id" required><br>
+                <label>Estatus:</label><input type="text" id="add-status" required><br>
+                <label>Direccion:</label><input type="text" id="add-address" required><br>
+                <label>Nivel de gasolina (%):</label><input type="number" id="add-fuel-level" required><br>
+                <label>Velocidad (km/h):</label><input type="number" id="add-avg-speed" required><br>
+                <label>Total KM:</label><input type="number" id="add-total-km" required><br>
+                <button type="submit">Añadir vehiculo</button>
+            </form>
+            <form id="update-vehicle-form">
+                <h3>Editar vehiculo</h3>
+                <label>ID:</label><input type="number" id="update-id" required><br>
+                <label>Estatus:</label><input type="text" id="update-status" required><br>
+                <label>Direccion:</label><input type="text" id="update-address" required><br>
+                <label>Nivel de gasolina (%):</label><input type="number" id="update-fuel-level" required><br>
+                <label>Velocidad (km/h):</label><input type="number" id="update-avg-speed" required><br>
+                <label>Total KM:</label><input type="number" id="update-total-km" required><br>
+                <button type="submit">Update Vehicle</button>
+            </form>
+        </div>
+        <button onclick="loadFleetData()">Recargar mapa</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
